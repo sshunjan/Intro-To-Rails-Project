@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  region: MyText
+  population: 1
+  area: 1
+  gdp: 1
+
+two:
+  name: MyText
+  region: MyText
+  population: 1
+  area: 1
+  gdp: 1
