@@ -1,0 +1,51 @@
+<h2>Database description</h2>
+
+<p>
+  The website uses a couple of open source datasets to populate the database to use the website.
+
+  The website's database has 4 Tables:
+  <ul>
+    <li>Readers Table</li>
+    <li>Books Table</li>
+    <li>Addresses Table</li>
+    <li>Countries Table</li>
+    <li>Reads Table</li>
+
+    <h3>Readers Table</h3>
+      <p>
+        The Readers Table contains all the readers' information. The columns of this table include Name, phone, email, address and nationality of the reader.
+        It is assumed that the reader can only have one nationality and a single place of residence only has one reader.<br>
+        <b>Associations</b><br>
+          The table has one-to-one association with the address tables and one-to-many association with the country table because one country can
+          have many readers.<br>
+          This table also has a many-to-many relationship with the Books tables which is resolved using the Reads Table.<br>
+        <b>Resource: </b> The data was generated using <a href="https://github.com/stympy/faker">faker gem</a>.
+      </p>
+
+    <h3>Books Table</h3>
+      <p>
+        The Books Table contain information about a limited number of books. The columns include Name, isbn, author and year of the published book.<br>
+        <b>Associations</b><br>
+          The table has many-to-many association with the Readers Table which is resolved using the Reads table.<br>
+        <b>Resource: </b> The dataset was obtained from <a href="https://www.kaggle.com/zygmunt/goodbooks-10k/version/5#books.csv">kaggle datasets.</a>.
+      </p>
+
+    <h3>Addresses Table</h3>
+      <p>
+        This table contains all the addresses. The columns include Full Address, latitude and longitude.<br>
+        <b>Associations</b><br>
+          Only one-to-one association with the readers table.<br>
+        <b>Resource: </b> The data was generated using <a href="https://github.com/stympy/faker">faker gem</a>.
+      </p>
+
+  <h3>Countries Table</h3>
+      <p>
+        This table contains all the countires. The columns include Name, region, area, population and gdp of the country.<br>
+        <b>Associations</b><br>
+          One-to-many association with the readers table.<br>
+        <b>Resource: </b>The dataset was obtained from <a href="https://www.kaggle.com/fernandol/countries-of-the-world">kaggle datasets. https://www.kaggle.com/fernandol/countries-of-the-world
+      </p>
+  </ul>
+
+
+</p>

@@ -1,0 +1,7 @@
+<h3><%= @reader.name%></h3>
+<div>
+<b>Phone:</b> <%= @reader.name%><br>
+<b>Address:</b> <%= @reader.address.full_address%><br>
+<b>Country:</b> <%= @reader.country.name%><br>
+<b>Books Read:</b> <% @books_read.each do|b|%> <%=b.book.name%>, <%end%>
+</div>

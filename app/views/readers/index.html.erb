@@ -1,0 +1,6 @@
+<h3>All Readers</h3>
+<ul>
+<% @readers.each do |reader|%>
+  <li><%=link_to reader.name, reader %></li>
+<%end%>
+</ul>
