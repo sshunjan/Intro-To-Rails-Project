@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'countries/index'
+  get 'countries/show'
   resources :readers, only: [:index, :show]
+  resources :countries, only: [:index, :show]
 
   get 'about', to: 'pages#about', as: 'about'
   get 'description',to: 'pages#description',as: 'description'
