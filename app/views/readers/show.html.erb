@@ -4,7 +4,7 @@
 <b>Address:</b> <%= @reader.address.full_address%><br>
 <b>Country:</b> <%= link_to @reader.country.name, @reader.country%><br>
 <div>
-  <b>Books Read:</b> <ul><% @books_read.each do|b|%> <li><%=b.book.name%></li> <%end%></ul>
+  <b>Books Read:</b> <ul><% @books_read.each do|b|%> <li><%=link_to b.book.name, b.book%></li> <%end%></ul>
 </div>
 
 </div>
