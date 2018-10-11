@@ -4,6 +4,6 @@ class Reader < ApplicationRecord
   belongs_to :address
   belongs_to :country
 
-  has_many :reads
-  has_many :books, through: :reads
+  has_many :reads , dependent: :destroy
+  has_many :books, through: :reads, dependent: :destroy
 end

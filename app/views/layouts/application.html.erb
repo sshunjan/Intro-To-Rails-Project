@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1><%= link_to 'BookReaders.com', root_path%></h1>
+      <nav>
+        <ul>
+          <li><%= link_to 'Home', root_path%></li>
+          <li><%= link_to 'About Us', about_path%></li>
+          <li><%= link_to 'Description', description_path%></li>
+        </ul>
+      </nav>
+    </header>
+      <%= yield %>
+    <footer>
+      <h5>Copywrong 2018</h5>
+    </footer>
   </body>
 </html>
